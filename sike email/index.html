@@ -1,0 +1,290 @@
+<html>
+ <head>
+  <title>
+   Email App
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-blue-50 text-gray-800">
+  <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+   <h1 class="text-2xl font-bold flex items-center">
+    <img alt="Sike Email logo" class="h-8 w-8 mr-2" height="40" src="https://storage.googleapis.com/a1aa/image/FIQb1Km0fHS7RVCQBfuWOcXuLESVsEpxQYbcFvH56QI.jpg" width="40"/>
+    Sike Email
+   </h1>
+   <nav>
+    <ul class="flex space-x-4">
+     <li>
+      <a class="hover:text-gray-300" href="#">
+       Home
+       <span class="ml-1">
+        🏠
+       </span>
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gray-300" href="#">
+       Inbox
+       <span class="ml-1">
+        📥
+       </span>
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gray-300" href="#">
+       Sent
+       <span class="ml-1">
+        📤
+       </span>
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gray-300" href="#">
+       Drafts
+       <span class="ml-1">
+        📝
+       </span>
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gray-300" href="#">
+       Trash
+       <span class="ml-1">
+        🗑️
+       </span>
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </header>
+  <main class="flex flex-col md:flex-row">
+   <aside class="bg-white w-full md:w-1/4 p-4 border-r border-gray-200">
+    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300" id="composeButton">
+     Compose
+     <span class="ml-1">
+      ✉️
+     </span>
+    </button>
+    <ul class="mt-4 space-y-2">
+     <li class="flex items-center space-x-2 hover:bg-blue-100 p-2 rounded transition duration-300">
+      <i class="fas fa-inbox">
+      </i>
+      <a class="flex-1" href="#">
+       Inbox
+      </a>
+     </li>
+     <li class="flex items-center space-x-2 hover:bg-blue-100 p-2 rounded transition duration-300">
+      <i class="fas fa-paper-plane">
+      </i>
+      <a class="flex-1" href="#">
+       Sent
+      </a>
+     </li>
+     <li class="flex items-center space-x-2 hover:bg-blue-100 p-2 rounded transition duration-300">
+      <i class="fas fa-file-alt">
+      </i>
+      <a class="flex-1" href="#">
+       Drafts
+      </a>
+     </li>
+     <li class="flex items-center space-x-2 hover:bg-blue-100 p-2 rounded transition duration-300">
+      <i class="fas fa-trash">
+      </i>
+      <a class="flex-1" href="#">
+       Trash
+      </a>
+     </li>
+    </ul>
+   </aside>
+   <section class="flex-1 p-4">
+    <h2 class="text-xl font-bold mb-4">
+     Inbox
+    </h2>
+    <div id="emailList">
+     <div class="bg-white p-4 rounded shadow-md mb-4 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of John Doe" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/uH7WJk5lgT-C4UNXVohJqvM-Bo2jdcynLxj5IJq6Ztk.jpg" width="40"/>
+        <div>
+         <h3 class="font-bold">
+          John Doe
+         </h3>
+         <p class="text-sm text-gray-600">
+          john.doe@example.com
+         </p>
+        </div>
+       </div>
+       <p class="text-sm text-gray-600">
+        2 hours ago
+       </p>
+      </div>
+      <p class="mt-2">
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md mb-4 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of Jane Smith" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/NJ5J9IoCux2va626VceSeCg3j8n9ZwUohDpzCfaM_-I.jpg" width="40"/>
+        <div>
+         <h3 class="font-bold">
+          Jane Smith
+         </h3>
+         <p class="text-sm text-gray-600">
+          jane.smith@example.com
+         </p>
+        </div>
+       </div>
+       <p class="text-sm text-gray-600">
+        5 hours ago
+       </p>
+      </div>
+      <p class="mt-2">
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md mb-4 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of Alice Johnson" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/RHsLXduMMBtXNYrFAs3-_yKzkhDmQquM7kq3NZ5WWYM.jpg" width="40"/>
+        <div>
+         <h3 class="font-bold">
+          Alice Johnson
+         </h3>
+         <p class="text-sm text-gray-600">
+          alice.johnson@example.com
+         </p>
+        </div>
+       </div>
+       <p class="text-sm text-gray-600">
+        1 day ago
+       </p>
+      </div>
+      <p class="mt-2">
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow-md mb-4 hover:shadow-lg transition duration-300">
+      <div class="flex justify-between items-center">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of Bob Brown" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/uEA8Oc8hvSVa6kdkZaYVO_syt0olsl-Wtqw7mG2tdWs.jpg" width="40"/>
+        <div>
+         <h3 class="font-bold">
+          Bob Brown
+         </h3>
+         <p class="text-sm text-gray-600">
+          bob.brown@example.com
+         </p>
+        </div>
+       </div>
+       <p class="text-sm text-gray-600">
+        2 days ago
+       </p>
+      </div>
+      <p class="mt-2">
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Compose Email Modal -->
+  <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden" id="composeModal">
+   <div class="bg-white p-6 rounded-lg shadow-lg w-11/12 md:w-1/2">
+    <h2 class="text-xl font-bold mb-4">
+     Compose Email
+    </h2>
+    <form id="composeForm">
+     <div class="mb-4">
+      <label class="block text-gray-700">
+       To:
+      </label>
+      <input class="w-full p-2 border border-gray-300 rounded" id="emailTo" required="" type="email"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-700">
+       Subject:
+      </label>
+      <input class="w-full p-2 border border-gray-300 rounded" id="emailSubject" required="" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-700">
+       Message:
+      </label>
+      <textarea class="w-full p-2 border border-gray-300 rounded" id="emailMessage" required="" rows="5"></textarea>
+     </div>
+     <div class="flex justify-end space-x-2">
+      <button class="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600 transition duration-300" id="cancelButton" type="button">
+       Cancel
+      </button>
+      <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300" type="submit">
+       Send
+      </button>
+     </div>
+    </form>
+   </div>
+  </div>
+  <script>
+document.getElementById('composeButton').addEventListener('click', function() {
+            document.getElementById('composeModal').classList.remove('hidden');
+      });
+
+      document.getElementById('cancelButton').addEventListener('click', function() {
+            document.getElementById('composeModal').classList.add('hidden');
+      });
+
+      document.getElementById('composeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const emailTo = document.getElementById('emailTo').value;
+            const emailSubject = document.getElementById('emailSubject').value;
+            const emailMessage = document.getElementById('emailMessage').value;
+
+            const emailList = document.getElementById('emailList');
+
+            const newEmail = document.createElement('div');
+            newEmail.classList.add('bg-white', 'p-4', 'rounded', 'shadow-md', 'mb-4', 'hover:shadow-lg', 'transition', 'duration-300');
+            newEmail.innerHTML = `
+                 <div class="flex justify-between items-center">
+                      <div class="flex items-center space-x-2">
+                            <img alt="Profile picture of ${emailTo}" class="rounded-full" height="40" src="https://placehold.co/40x40?text=${emailTo.charAt(0).toUpperCase()}" width="40"/>
+                            <div>
+                                 <h3 class="font-bold">${emailTo}</h3>
+                                 <p class="text-sm text-gray-600">${emailTo}</p>
+                            </div>
+                      </div>
+                      <p class="text-sm text-gray-600">Just now</p>
+                      <button class="delete-button bg-red-600 text-white py-1 px-2 rounded hover:bg-red-700 transition duration-300">Delete</button>
+                 </div>
+                 <p class="mt-2">${emailMessage}</p>
+            `;
+
+            emailList.prepend(newEmail);
+
+            document.getElementById('composeModal').classList.add('hidden');
+            document.getElementById('composeForm').reset();
+      });
+
+      document.getElementById('emailList').addEventListener('click', function(event) {
+            if (event.target.classList.contains('delete-button')) {
+                 event.target.closest('.bg-white').remove();
+            }
+      });
+
+      const emails = document.querySelectorAll('#emailList > div');
+      emails.forEach(email => {
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add('delete-button', 'bg-red-600', 'text-white', 'py-1', 'px-2', 'rounded', 'hover:bg-red-700', 'transition', 'duration-300');
+            deleteButton.textContent = 'Delete';
+            email.querySelector('.flex.justify-between.items-center').appendChild(deleteButton);
+      });
+    </script>
+ </body>
+</html>
